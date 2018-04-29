@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<odoo>
+	<act_window id="action_obat"
+		name="Obat"
+		res_model="basic_hms.obat"
+		view_mode="tree,form" />
+	<act_window id="action_resep_obat"
+		name="Resep Obat"
+		res_model="basic_hms.resep_obat"
+		view_mode="tree,form" />
+
+	<menuitem id="menu_hospital"
+		name="Hospital"
+		action="action_obat"/>
+
+	<menuitem id="side_menu_obat"
+		name="Obat"
+		parent="menu_hospital"
+		action="action_obat"/>
+
+	<menuitem id="side_menu_resep_obat"
+		name="Resep Obat"
+		parent="menu_hospital"
+		action="action_resep_obat"/>
+</odoo>

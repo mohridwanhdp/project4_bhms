@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<odoo>
+	<record id="view_form_resep_obat" model="ir.ui.view">
+		<field name="name">Form Resep Obat</field>
+		<field name="model">basic_hms.resep_obat</field>
+		<field name="arch" type="xml">
+			<form string="Resep Obat">
+				<sheet>
+					<group name="group_top">
+                        <group name="group_left">
+                            <field name="nama_pasien"/>
+                            <field name="tgl_resep"/>
+                        </group>
+					    <group name="group_right">
+                            <field name="nama_dokter" />
+					    </group>
+                    </group>
+                    <group name="group_bottom">
+                        <notebook>
+							<page name="obat" string="Detail Resep">
+								<field name="obat" widget="handle"/>
+							</page>
+						</notebook>
+                    </group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="view_tree_resep_obat" model="ir.ui.view">
+		<field name="name">Tree Resep Obat</field>
+		<field name="model">basic_hms.resep_obat</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="nama_pasien"/>
+				<field name="nama_dokter"/>
+            </tree>
+		</field>
+	</record>
+    <record id="view_tree_resep_obat_detail" model="ir.ui.view">
+		<field name="name">Detail Resep </field>
+		<field name="model">basic_hms.detail_resep_obat</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="nama_obat"/>
+				<field name="dosis"/>
+				<field name="keterangan"/>
+				<field name="keterangan" widget="selection"/>
+			</tree>
+		</field>
+	</record>
+</odoo>

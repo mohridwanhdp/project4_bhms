@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<odoo>
+	<record id="view_form_obat" model="ir.ui.view">
+		<field name="name">Form Obat</field>
+		<field name="model">basic_hms.obat</field>
+		<field name="arch" type="xml">
+			<form string="Obat">
+				<sheet>
+					<group name="group_top">
+						<group name="group_left">
+							<field name="nama_obat"/>
+							<field name="jenis_obat" widget="selection"/>
+						</group>
+						<group name="group_right">
+							<field name="satuan" widget="selection"/>
+							<field name="stok" />
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="view_tree_obat" model="ir.ui.view">
+		<field name="name">Tree Obat</field>
+		<field name="model">basic_hms.obat</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="nama_obat"/>
+				<field name="stok"/>
+            </tree>
+		</field>
+	</record>
+
+</odoo>
